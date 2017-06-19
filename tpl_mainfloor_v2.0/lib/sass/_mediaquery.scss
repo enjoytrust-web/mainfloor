@@ -1,0 +1,56 @@
+
+/*==============================
+-MediaQuery
+===============================*/
+
+/* Grid */
+@media only screen and (max-width: $breakpoint-default) {
+  [class*="container"]{
+    padding-right: $gutter;
+    padding-left: $gutter;
+  }
+
+  [class*="row"]{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  [class*="grid-"]{
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  [class*="right-grid-"]{
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  [class*="l-offset-"] {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+
+/* Default */
+@media screen and (max-width: $breakpoint-default) {
+
+}
+
+/* PC */
+@media screen and (max-width: $breakpoint-pc) {
+
+}
+
+/* Tablet */
+@media screen and (max-width: $breakpoint-tablet) {
+
+}
+
+/* SmartPhone */
+@media screen and (max-width: $breakpoint-sp) {
+
+}
+

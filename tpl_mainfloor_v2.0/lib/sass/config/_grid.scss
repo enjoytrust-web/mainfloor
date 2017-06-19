@@ -1,0 +1,394 @@
+
+/*==============================
+-Grid(padding)
+===============================*/
+
+/* ======= Class Grid System ======= */
+.l-grid-1 { width: 8.33333333%; }
+.l-grid-2 { width: 16.66666667%; }
+.l-grid-3 { width: 25%; }
+.l-grid-4 { width: 33.33333333%; }
+.l-grid-5 { width: 41.66666667%; }
+.l-grid-6 { width: 50%; }
+.l-grid-7 { width: 58.33333333%; }
+.l-grid-8 { width: 66.66666667%; }
+.l-grid-9 { width: 75%; }
+.l-grid-10 { width: 83.33333333%; }
+.l-grid-11 { width: 91.66666667%; }
+.l-grid-12 { width: 100%; }
+.l-tile-grid-1 { width: 8.33333333%; }
+.l-tile-grid-2 { width: 16.66666667%; }
+.l-tile-grid-3 { width: 25%; }
+.l-tile-grid-4 { width: 33.33333333%; }
+.l-tile-grid-5 { width: 41.66666667%; }
+.l-tile-grid-6 { width: 50%; }
+.l-tile-grid-7 { width: 58.33333333%; }
+.l-tile-grid-8 { width: 66.66666667%; }
+.l-tile-grid-9 { width: 75%; }
+.l-tile-grid-10 { width: 83.33333333%; }
+.l-tile-grid-11 { width: 91.66666667%; }
+.l-tile-grid-12 { width: 100%; }
+.l-offset-right-1 { margin-right: 8.33333333%; }
+.l-offset-right-2 { margin-right: 16.66666667%; }
+.l-offset-right-3 { margin-right: 25%; }
+.l-offset-right-4 { margin-right: 33.33333333%; }
+.l-offset-right-5 { margin-right: 41.66666667%; }
+.l-offset-right-6 { margin-right: 50%; }
+.l-offset-right-7 { margin-right: 58.33333333%; }
+.l-offset-right-8 { margin-right: 66.66666667%; }
+.l-offset-right-9 { margin-right: 75%; }
+.l-offset-right-10 { margin-right: 83.33333333%; }
+.l-offset-right-11 { margin-right: 91.66666667%; }
+.l-offset-right-12 { margin-right: 100%; }
+.l-offset-left-1 { margin-left: 8.33333333%; }
+.l-offset-left-2 { margin-left: 16.66666667%; }
+.l-offset-left-3 { margin-left: 25%; }
+.l-offset-left-4 { margin-left: 33.33333333%; }
+.l-offset-left-5 { margin-left: 41.66666667%; }
+.l-offset-left-6 { margin-left: 50%; }
+.l-offset-left-7 { margin-left: 58.33333333%; }
+.l-offset-left-8 { margin-left: 66.66666667%; }
+.l-offset-left-9 { margin-left: 75%; }
+.l-offset-left-10 { margin-left: 83.33333333%; }
+.l-offset-left-11 { margin-left: 91.66666667%; }
+.l-offset-left-12 { margin-left: 100%; }
+.left { float: left; }
+.right { float: right; }
+
+[class*="l-full"] {
+	margin: 0 auto;
+	font-size: 0;
+}
+
+[class*="l-container"] {
+	max-width: $maxwidth;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+[class*="l-row"] {
+	margin-left: -#{$gutter};
+	margin-right: -#{$gutter};
+	font-size: 0;
+
+	&::before,
+	&::after {
+    	content: "";
+    	display: block;
+    	clear: both;
+    }
+}
+
+[class*="l-grid-"] {
+	position: relative;
+	min-height: 1px;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1rem;
+	word-wrap:break-word;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+
+[class*="l-tile-grid-"] {
+	position: relative;
+	min-height: 1px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1rem;
+	word-wrap:break-word;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+/* ======= Mixin Grid System ======= */
+$grid-1: 8.33333333%;
+$grid-2: 16.66666667%;
+$grid-3: 25%;
+$grid-4: 33.33333333%;
+$grid-5: 41.66666667%;
+$grid-6: 50%;
+$grid-7: 58.33333333%;
+$grid-8: 66.66666667%;
+$grid-9: 75%;
+$grid-10: 83.33333333%;
+$grid-11: 91.66666667%;
+$grid-12: 100%;
+@mixin left { float: left; }
+@mixin right { float: right; }
+
+@mixin grid-style {
+	position: relative;
+	min-height: 1px;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1rem;
+	word-wrap:break-word;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+@mixin tile-grid-style {
+	position: relative;
+	min-height: 1px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1rem;
+	word-wrap:break-word;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+@mixin l-grid-1 {
+	width: $grid-1;
+	@include grid-style;
+}
+
+@mixin l-grid-2 {
+	width: $grid-2;
+	@include grid-style;
+}
+
+@mixin l-grid-3 {
+	width: $grid-3;
+	@include grid-style;
+}
+
+@mixin l-grid-4 {
+	width: $grid-4;
+	@include grid-style;
+}
+
+@mixin l-grid-5 {
+	width: $grid-5;
+	@include grid-style;
+}
+
+@mixin l-grid-6 {
+	width: $grid-6;
+	@include grid-style;
+}
+
+@mixin l-grid-7 {
+	width: $grid-7;
+	@include grid-style;
+}
+
+@mixin l-grid-8 {
+	width: $grid-8;
+	@include grid-style;
+}
+
+@mixin l-grid-9 {
+	width: $grid-9;
+	@include grid-style;
+}
+
+@mixin l-grid-10 {
+	width: $grid-10;
+	@include grid-style;
+}
+
+@mixin l-grid-11 {
+	width: $grid-11;
+	@include grid-style;
+}
+
+@mixin l-grid-12 {
+	width: $grid-12;
+	@include grid-style;
+}
+
+@mixin l-tile-grid-1 {
+	width: $grid-1;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-2 {
+	width: $grid-2;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-3 {
+	width: $grid-3;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-4 {
+	width: $grid-4;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-5 {
+	width: $grid-5;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-6 {
+	width: $grid-6;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-7 {
+	width: $grid-7;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-8 {
+	width: $grid-8;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-9 {
+	width: $grid-9;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-10 {
+	width: $grid-10;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-11 {
+	width: $grid-11;
+	@include tile-grid-style;
+}
+
+@mixin l-tile-grid-12 {
+	width: $grid-12;
+	@include tile-grid-style;
+}
+
+@mixin l-offset-right-1 {
+	margin-right: $grid-1;
+}
+
+@mixin l-offset-right-2 {
+	margin-right: $grid-2;
+}
+
+@mixin l-offset-right-3 {
+	margin-right: $grid-3;
+}
+
+@mixin l-offset-right-4 {
+	margin-right: $grid-4;
+}
+
+@mixin l-offset-right-5 {
+	margin-right: $grid-5;
+}
+
+@mixin l-offset-right-6 {
+	margin-right: $grid-6;
+}
+
+@mixin l-offset-right-7 {
+	margin-right: $grid-7;
+}
+
+@mixin l-offset-right-8 {
+	margin-right: $grid-8;
+}
+
+@mixin l-offset-right-9 {
+	margin-right: $grid-9;
+}
+
+@mixin l-offset-right-10 {
+	margin-right: $grid-10;
+}
+
+@mixin l-offset-right-11 {
+	margin-right: $grid-11;
+}
+
+@mixin l-offset-right-12 {
+	margin-right: $grid-12;
+}
+
+@mixin l-offset-left-1 {
+	margin-left: $grid-1;
+}
+
+@mixin l-offset-left-2 {
+	margin-left: $grid-2;
+}
+
+@mixin l-offset-left-3 {
+	margin-left: $grid-3;
+}
+
+@mixin l-offset-left-4 {
+	margin-left: $grid-4;
+}
+
+@mixin l-offset-left-5 {
+	margin-left: $grid-5;
+}
+
+@mixin l-offset-left-6 {
+	margin-left: $grid-6;
+}
+
+@mixin l-offset-left-7 {
+	margin-left: $grid-7;
+}
+
+@mixin l-offset-left-8 {
+	margin-left: $grid-8;
+}
+
+@mixin l-offset-left-9 {
+	margin-left: $grid-9;
+}
+
+@mixin l-offset-left-10 {
+	margin-left: $grid-10;
+}
+
+@mixin l-offset-left-11 {
+	margin-left: $grid-11;
+}
+
+@mixin l-offset-left-12 {
+	margin-left: $grid-12;
+}
+
+@mixin l-full {
+	margin: 0 auto;
+	font-size: 0;
+}
+
+@mixin l-container {
+	max-width: $maxwidth;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+@mixin l-row {
+	margin-left: -#{$gutter};
+	margin-right: -#{$gutter};
+	font-size: 0;
+}
+
+@mixin l-row-before {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+@mixin l-row-after {
+	content: "";
+	display: block;
+	clear: both;
+}
