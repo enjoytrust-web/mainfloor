@@ -75,16 +75,16 @@ add_action('wp_before_admin_bar_render', 'add_new_item_in_admin_bar');
 function change_post_menu_label() {
 global $menu;
 global $submenu;
-$menu[5][0] = '使用しない';
-$submenu['edit.php'][5][0] = '使用しない';
+$menu[5][0] = '新しい記事を投稿';
+$submenu['edit.php'][5][0] = '記事一覧';
 $submenu['edit.php'][10][0] = '新規追加';
-$submenu['edit.php'][16][0] = 'タグ';
+$submenu['edit.php'][16][0] = 'タグを管理';
 //echo ";
 }
 function change_post_object_label() {
 global $wp_post_types;
 $labels = &$wp_post_types['post']->labels;
-$labels->name = '使用しない';
+$labels->name = '記事一覧';
 $labels->singular_name = '使用しない';
 $labels->add_new = _x('追加', '使用しない');
 $labels->add_new_item = '新規追加';

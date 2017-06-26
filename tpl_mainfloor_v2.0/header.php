@@ -136,72 +136,24 @@
   <?php if(is_home()):?>
     <div class="l-wrapper top-content-topics">
       <div class="l-full">
-        <div class="l-tile-grid-3">
-          <a href="<?php the_permalink($post->ID);?>" class="top-post-info">
-            <figure class="top-post-info-pics" style="background-image: url('<?php ;?>')"></figure>
-            <figcaption class="top-post-info-wrapper">
-              <p class="top-post-info-label"><?php ;?></p>
-              <p class="top-post-info-header"><?php ;?></p>
-              <p class="top-post-info-more"><?php ;?></p>
-            </figcaption>
-          </a>
-        </div>
-        <div class="l-tile-grid-3">
-          <a href="<?php the_permalink($post->ID);?>" class="top-post-info">
-            <figure class="top-post-info-pics" style="background-image: url('<?php ;?>')"></figure>
-            <figcaption class="top-post-info-wrapper">
-              <p class="top-post-info-label"><?php ;?></p>
-              <p class="top-post-info-header"><?php ;?></p>
-              <p class="top-post-info-more"><?php ;?></p>
-            </figcaption>
-          </a>
-        </div>
-        <div class="l-tile-grid-3">
-          <a href="<?php the_permalink($post->ID);?>" class="top-post-info">
-            <figure class="top-post-info-pics" style="background-image: url('<?php ;?>')"></figure>
-            <figcaption class="top-post-info-wrapper">
-              <p class="top-post-info-label"><?php ;?></p>
-              <p class="top-post-info-header"><?php ;?></p>
-              <p class="top-post-info-more"><?php ;?></p>
-            </figcaption>
-          </a>
-        </div>
-        <div class="l-tile-grid-3">
-          <a href="<?php the_permalink($post->ID);?>" class="top-post-info">
-            <figure class="top-post-info-pics" style="background-image: url('<?php ;?>')"></figure>
-            <figcaption class="top-post-info-wrapper">
-              <p class="top-post-info-label"><?php ;?></p>
-              <p class="top-post-info-header"><?php ;?></p>
-              <p class="top-post-info-more"><?php ;?></p>
-            </figcaption>
-          </a>
-        </div>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+          <div class="l-tile-grid-3">
+            <a href="<?php the_permalink($post->ID);?>" class="top-post-info">
+              <figure class="top-post-info-pics" style="background-image: url('<?php the_field('post_entry_mainpics'); ?>')"></figure>
+              <figcaption class="top-post-info-wrapper">
+                <p class="top-post-info-label"><?php ;?></p>
+                <p class="top-post-info-header"><?php the_field('post_entry_header');?></p>
+                <p class="top-post-info-more">MORE</p>
+              </figcaption>
+            </a>
+          </div>
+      <?php endwhile; else : ?>
+      <?php endif; ?>
+
       </div>
     </div>
 
   <?php endif; ?>
 
-  <script>
-    $(function(){
-      $('.trigger-wrapper').click(function(){
-        $('.share-trigger').removeClass('active');
-        $('.share-nav').removeClass('active');
-        $('.fa-share-alt').removeClass('active');
-        $(this).toggleClass('active');
-        $('.trigger-line').toggleClass('active');
-        $('.g-nav').toggleClass('active');
-      });
-    });
 
-    $(function(){
-      $('.share-trigger').click(function(){
-        $('.trigger-wrapper').removeClass('active');
-        $('.trigger-line').removeClass('active');
-        $('.g-nav').removeClass('active');
-        $(this).toggleClass('active');
-        $('.share-nav').toggleClass('active');
-        $('.fa-share-alt').toggleClass('active');
-      });
-    });
-  </script>
 <?php wp_head(); ?>
