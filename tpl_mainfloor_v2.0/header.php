@@ -148,7 +148,7 @@
             </a>
           </div>
       <?php endwhile; else : ?>
-      <?php endif; ?>
+      <?php endif; wp_reset_query();?>
 
       </div>
     </div>

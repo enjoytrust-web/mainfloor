@@ -64,6 +64,17 @@
                   <img class="single-post-pics" src="<?php the_sub_field('post_content_pics_harf_b');?>">
                 </div>
               </div>
+            <?php elseif( get_row_layout() == 'flexiblefield_youtube' ) : ?>
+              <p class="single-post-youtube-title"><?php the_sub_field('post_content_youtube_title'); ?></p>
+              <div class="single-post-youtube">
+                <iframe width="853" height="480" src="//www.youtube.com/embed/<?php the_sub_field('post_content_youtube_id'); ?>?playsinline=1&showinfo=0" frameborder="0" allowfullscreen class="single-post-youtube-player"></iframe>
+              </div>
+            <?php elseif( get_row_layout() == 'flexiblefield_instagram' ) : ?>
+              <?php the_sub_field('post_content_instagram'); ?>
+
+
+
+
           <?php endif; ?>
         <?php endwhile; ?>
         <?php endif; ?>

@@ -9,7 +9,7 @@
           $args = array(
           'post_type' => array('promotion-custom') ,
           'tax_query' => array(
-            'taxonomy' => 'system-custom_category',
+            'taxonomy' => 'promotion-custom_category',
             'field' => 'slug',
             'terms' => array('promotion_top'),
           ),
@@ -134,7 +134,7 @@
             </a>
           </div>
           <?php endwhile; else : ?>
-          <?php endif; ?>
+          <?php endif; wp_reset_query();?>
 
         </div>
       </div>
