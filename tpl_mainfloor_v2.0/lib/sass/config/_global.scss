@@ -36,7 +36,7 @@ a,a:hover {
 }
 
 a {
-	display: block;
+	// display: block;
 	@include hoveranimation(all, .4s, ease);
 }
 

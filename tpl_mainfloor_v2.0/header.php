@@ -57,17 +57,17 @@
     <nav class="g-nav">
       <ul class="g-nav-menu-list">
         <li class="g-nav-menu-listin">
-          <a href="<?php echo home_url();?>/" class="g-nav-menu-listin-link">
+          <a href="<?php echo home_url();?>/event/" class="g-nav-menu-listin-link">
             EVENT
           </a>
         </li>
         <li class="g-nav-menu-listin">
-          <a href="<?php echo home_url();?>/" class="g-nav-menu-listin-link">
+          <a href="<?php echo home_url();?>/clubtopic/" class="g-nav-menu-listin-link">
             CLUB TOPIC
           </a>
         </li>
         <li class="g-nav-menu-listin">
-          <a href="<?php echo home_url();?>/" class="g-nav-menu-listin-link">
+          <a href="<?php echo home_url();?>/artist/" class="g-nav-menu-listin-link">
             DJ / ARTIST
           </a>
         </li>
@@ -77,7 +77,7 @@
           </a>
         </li>
         <li class="g-nav-menu-listin">
-          <a href="<?php echo home_url();?>/" class="g-nav-menu-listin-link">
+          <a href="<?php echo home_url();?>/music/" class="g-nav-menu-listin-link">
             MUSIC
           </a>
         </li>
@@ -134,9 +134,15 @@
   </header>
 
   <?php if(is_home()):?>
+
     <div class="l-wrapper top-content-topics">
       <div class="l-full">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php $args = array(
+        'post_type' => 'post' ,
+        'showposts' => 4
+      );
+      $posts = get_posts( $args );
+      if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post ); //記事がある場合 ?>
           <div class="l-tile-grid-3">
             <a href="<?php the_permalink($post->ID);?>" class="top-post-info">
               <figure class="top-post-info-pics" style="background-image: url('<?php the_field('post_entry_mainpics'); ?>')"></figure>
@@ -147,8 +153,8 @@
               </figcaption>
             </a>
           </div>
-      <?php endwhile; else : ?>
-      <?php endif; wp_reset_query();?>
+      <?php endforeach; else : ?>
+      <?php endif; wp_reset_postdata();?>
 
       </div>
     </div>

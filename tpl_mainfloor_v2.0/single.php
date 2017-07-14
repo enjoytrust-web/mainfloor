@@ -72,24 +72,58 @@
             <?php elseif( get_row_layout() == 'flexiblefield_instagram' ) : ?>
               <?php the_sub_field('post_content_instagram'); ?>
 
-
-
+            <?php elseif( get_row_layout() == 'flexiblefield_twitter' ) : ?>
+              <?php the_sub_field('post_content_twitter'); ?>
 
           <?php endif; ?>
         <?php endwhile; ?>
         <?php endif; ?>
+
+        <?php if( have_rows('post_info_flexiblefield') ): //柔軟コンテンツフィールドの値を持っているかどうかをチェック ?>
+          <div class="single-post-index-box">
+            <?php while ( have_rows('post_info_flexiblefield') ) : the_row(); //値のループ ?>
+            <?php if( get_row_layout() == 'flexiblefield_info_header' ): //レイアウト名1があった場合に出力 ?>
+              <p class="single-post-text-label-medium"><?php the_sub_field('post_info_header'); //柔軟コンテンツ内は'the_sub_field'や'get_sub_field'を使用 ?></p>
+
+              <?php elseif( get_row_layout() == 'flexiblefield_info_subheader' ): //レイアウト名2があった場合に出力 ?>
+                <p class="single-post-text-label-small"><?php the_sub_field('post_info_subheader'); ?></p>
+
+              <?php elseif( get_row_layout() == 'flexiblefield_info_text' ): //レイアウト名2があった場合に出力 ?>
+                <p class="single-post-text-lead"><?php the_sub_field('post_info_text'); ?></p>
+
+              <?php elseif( get_row_layout() == 'flexiblefield_info_notes' ):  ?>
+                <p class="single-post-text-notes"><?php the_sub_field('post_info_notes');?></p>
+
+              <?php elseif( get_row_layout() == 'flexiblefield_info_link' ):  ?>
+                <a href="<?php the_sub_field('post_info_link_url');?>" class="single-post-basiclink" target="_blank" >
+                  <?php the_sub_field('post_info_link_text');?>
+                </a>
+
+            <?php endif; ?>
+            <?php endwhile; ?>
+          </div>
+        <?php endif; ?>
+        <p class="single-post-writer-name">
+          (TEXT BY <?php the_field('post_entry_writername'); ?>)
+        </p>
+        <?php
+          get_template_part( 'content', get_post_format() );
+          get_template_part( 'related_posts' );
+          // Previous/next post navigation.
+        ?>
+
       </div>
       <div clasS="l-grid-4">
         <div class="sub-content-box sub-content-advertisement">
-
           <p class="google-adsense">
             Ads by Google
           </p>
         </div>
+
         <div class="sub-content-box sub-content-rescent-posts">
-          <h3 class="sub-content-header">MOST POPULAR</h3>
+          <h3 class="sub-content-header">RESCENT POST</h3>
           <div class="sub-content-inbox">
-            <?php query_posts('posts_per_page=6&offset=10'); ?>
+            <?php query_posts('posts_per_page=6'); ?>
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <a href="#" class="sub-content-inbox-postlist clearfix">
               <div class="sub-content-inbox-postlist-pics">

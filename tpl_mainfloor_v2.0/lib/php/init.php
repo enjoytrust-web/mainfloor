@@ -85,8 +85,8 @@ function change_post_object_label() {
 global $wp_post_types;
 $labels = &$wp_post_types['post']->labels;
 $labels->name = '記事一覧';
-$labels->singular_name = '使用しない';
-$labels->add_new = _x('追加', '使用しない');
+$labels->singular_name = '投稿';
+$labels->add_new = _x('追加', '投稿');
 $labels->add_new_item = '新規追加';
 $labels->edit_item = '更新内容の編集';
 $labels->new_item = '新規追加';

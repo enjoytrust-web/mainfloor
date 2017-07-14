@@ -6,24 +6,23 @@
 function create_post_type() {
 
   // プロモーション
-  register_post_type( 'promotion-custom',
+  register_post_type( 'promos-custom',
     array(
-      'label' => 'プロモーションを追加',
+      'label' => 'プロモーション',
       'public' => true,
-      // 'has_archive' => true,
       'menu_position' => 5,
       'supports' => 'title',
       'rewrite' => array(
-        'slug' => 'posts', //投稿タイプのスラッグと異なる文字列をURLに使いたい時に指定
-        'with_front' => false
+        'slug' => 'promos', //投稿タイプのスラッグと異なる文字列をURLに使いたい時に指定
+        'with_front' => true
       )
     )
   );
 
   // add taxonomy
   register_taxonomy(
-    'promotion-custom_category',
-    'promotion-custom',
+    'promos-custom_category',
+    'promos-custom',
     array(
       'label' => 'カテゴリー',
       'labels' => array(

@@ -30,3 +30,173 @@ h6 { font-size:10px; font-size:1rem; font-weight: bold; letter-spacing: .1rem; }
 p { font-size:12px; font-size:1.2rem; letter-spacing: .1rem; }
 a { font-size:12px; font-size:1.2rem; letter-spacing: .1rem; }
 }
+
+@font-face {
+  font-family:'SF Pro JP';
+  font-style:normal;
+  font-weight:100;
+  src:local('â˜ºï¸Ž'), url("../fonts/SFProJP_ultralight.woff") format("woff"), url("../fonts/SFProJP_ultralight.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP 100';
+  src:url("../fonts/SFProJP_ultralight.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP';
+  font-style:normal;
+  font-weight:200;
+  src:local('â˜ºï¸Ž'), url("../fonts/SFProJP_thin.woff") format("woff"), url("../fonts/SFProJP_thin.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP 200';
+  src:url("../fonts/SFProJP_thin.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP';
+  font-style:normal;
+  font-weight:300;
+  src:local('â˜ºï¸Ž'), url("../fonts/SFProJP_light.woff") format("woff"), url("../fonts/SFProJP_light.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP 300';
+  src:url("../fonts/SFProJP_light.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP';
+  font-style:normal;
+  font-weight:500;
+  src:local('â˜ºï¸Ž'), url("../fonts/SFProJP_medium.woff") format("woff"), url("../fonts/SFProJP_medium.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP 500';
+  src:url("../fonts/SFProJP_medium.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP';
+  font-style:normal;
+  font-weight:600;
+  src:local('â˜ºï¸Ž'), url("../fonts/SFProJP_semibold.woff") format("woff"), url("../fonts/SFProJP_semibold.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP 600';
+  src:url("../fonts/SFProJP_semibold.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP';
+  font-style:normal;
+  font-weight:700;
+  src:local('â˜ºï¸Ž'), url("../fonts/SFProJP_bold.woff") format("woff"), url("../fonts/SFProJP_bold.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP 700';
+  src:url("../fonts/SFProJP_bold.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP';
+  font-style:normal;
+  font-weight:800;
+  src:local('â˜ºï¸Ž'), url("../fonts/SFProJP_heavy.woff") format("woff"), url("../fonts/SFProJP_heavy.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP 800';
+  src:url("../fonts/SFProJP_heavy.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP';
+  font-style:normal;
+  font-weight:900;
+  src:local('â˜ºï¸Ž'), url("../fonts/SFProJP_black.woff") format("woff"), url("../fonts/SFProJP_black.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP 900';
+  src:url("../fonts/SFProJP_black.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'SF Pro JP';
+  font-style:normal;
+  font-weight:400;
+  src:url("../fonts/SFProJP_regular.eot");
+  src:local('â˜ºï¸Ž'), url("../fonts/SFProJP_regular.woff") format("woff"), url("../fonts/SFProJP_regular.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+
+
+/* apple TP */
+
+@font-face {
+  font-family:'appleTP 400';
+  src:url("../fonts/apple-tp_extrathin.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'appleTP';
+  font-style:normal;
+  font-weight: 400;
+  src:url("../fonts/apple-tp_extrathin.eot");
+  src:local('â˜ºï¸Ž'), url("../fonts/apple-tp_extrathin.woff") format("woff"), url("../fonts/apple-tp_extrathin.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'appleTP 600';
+  src:url("../fonts/apple-tp_semibold.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'appleTP';
+  font-style:normal;
+  font-weight: 600;
+  src:url("../fonts/apple-tp_semibold.eot");
+  src:local('â˜ºï¸Ž'), url("../fonts/apple-tp_semibold.woff") format("woff"), url("../fonts/apple-tp_semibold.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'appleTP 800';
+  src:url("../fonts/apple-tp_bold.eot");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}
+
+@font-face {
+  font-family:'appleTP';
+  font-style:normal;
+  font-weight: 800;
+  src:url("../fonts/apple-tp_bold.eot");
+  src:local('â˜ºï¸Ž'), url("../fonts/apple-tp_bold.woff") format("woff"), url("../fonts/apple-tp_bold.ttf") format("truetype");
+  /* (C) 2015 Apple Inc. All rights reserved.*/
+}

@@ -1,42 +1,22 @@
 <div class="l-wrapper guest-info-wrap">
   <div class="l-container">
     <div class="l-row">
-      <div class="l-grid-3">
-        <a class="guest-info">
-          <figure class="guest-info-pics">
-          </figure>
-          <p class="guest-info-guestname"></p>
-          <p class="guest-info-text-lead"></p>
-          <p class="guest-info-button">
-        </a>
-      </div>
-      <div class="l-grid-3">
-        <a class="guest-info">
-          <figure class="guest-info-pics">
-          </figure>
-          <p class="guest-info-guestname"></p>
-          <p class="guest-info-text-lead"></p>
-          <p class="guest-info-button">
-        </a>
-      </div>
-      <div class="l-grid-3">
-        <a class="guest-info">
-          <figure class="guest-info-pics">
-          </figure>
-          <p class="guest-info-guestname"></p>
-          <p class="guest-info-text-lead"></p>
-          <p class="guest-info-button">
-        </a>
-      </div>
-      <div class="l-grid-3">
-        <a class="guest-info">
-          <figure class="guest-info-pics">
-          </figure>
-          <p class="guest-info-guestname"></p>
-          <p class="guest-info-text-lead"></p>
-          <p class="guest-info-button">
-        </a>
-      </div>
+      <h3 class="section-header">
+        RESCENT POSTS
+      </h3>
+      <?php query_posts("category_name=dj_artist&showposts=4"); ?>
+        <?php if(have_posts()): while(have_posts()): the_post(); ?>
+        <?php get_template_part('content','excerpt'); ?>
+        <div class="l-grid-3 footer-rescent-artist">
+          <a class="artist-info">
+            <figure class="artist-info-pics" style="background-image:url('<?php the_field('post_content_artistphoto');?>');"></figure>
+            <span class="artist-info-inwrap">
+              <p class="artist-info-name"><?php the_field('post_content_artistname');?></p>
+              <p class="artist-info-button">MORE</p>
+            </span>
+          </a>
+        </div>
+      <?php endwhile; endif; ?>
     </div>
   </div>
 </div>
@@ -48,6 +28,8 @@
 </footer>
 <?php wp_footer(); ?>
 <script src="<?php bloginfo('template_url');?>/lib/js/app.js"></script>
+<!-- TWITTER JS -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <!-- Instagram JS -->
 <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 <script>
