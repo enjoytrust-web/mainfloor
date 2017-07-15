@@ -17,7 +17,7 @@
         <li class="guide-listin">
           <p class="guidelist-index">大見出し</p>
           <p class="guidelist-textlead">
-            一番大きな見出しです。話の大きい区切りとして使用してください。
+            一番大きな見出しです。章や話の大きい区切りとして使用してください。
           </p>
         </li>
         <li class="guide-listin">
@@ -27,13 +27,13 @@
           </p>
         </li>
         <li class="guide-listin">
-          <p class="guidelist-index">大見出し</p>
+          <p class="guidelist-index">小見出し</p>
           <p class="guidelist-textlead">
-            一番大きな見出しです。話の大きい区切りとして使用してください。
+            使用頻度は少ないですが少し協調できる見出しです。
           </p>
         </li>
         <li class="guide-listin">
-          <p class="guidelist-index">大見出し</p>
+          <p class="guidelist-index">文章（ベーシック）</p>
           <p class="guidelist-textlead">
             一番大きな見出しです。話の大きい区切りとして使用してください。
           </p>

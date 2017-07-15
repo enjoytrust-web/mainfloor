@@ -1068,3 +1068,18 @@
   font-size: 1.4rem;
   font-weight: 600;
 }
+
+
+
+/* spotify player */
+
+#spotifyPlayer {
+  iframe {
+    max-width: 800px;
+    width: 100% !important;
+  }
+
+  .main {
+    max-width: 800px;
+  }
+}

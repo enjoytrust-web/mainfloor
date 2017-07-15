@@ -75,6 +75,11 @@
             <?php elseif( get_row_layout() == 'flexiblefield_twitter' ) : ?>
               <?php the_sub_field('post_content_twitter'); ?>
 
+            <?php elseif( get_row_layout() == 'flexiblefield_spotify' ) : ?>
+              <div id="spotifyPlayer">
+                <?php the_sub_field('post_content_spotify'); ?>
+              </div>
+
           <?php endif; ?>
         <?php endwhile; ?>
         <?php endif; ?>
