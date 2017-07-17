@@ -1057,10 +1057,13 @@
   max-width: 100%;
 }
 
-.guidelist,
+.guidelist {
+  padding-left: 2rem;
+}
+
 .guide-listin {
   list-style: disc;
-  margin-left: 1rem;
+  padding: 1rem 0;
 }
 
 .guidelist-index {
@@ -1072,7 +1075,6 @@
 
 
 /* spotify player */
-
 #spotifyPlayer {
   iframe {
     max-width: 800px;
@@ -1082,4 +1084,5 @@
   .main {
     max-width: 800px;
   }
+
 }
