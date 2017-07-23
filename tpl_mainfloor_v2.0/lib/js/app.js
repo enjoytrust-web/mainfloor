@@ -1,26 +1,26 @@
-$(function(){
-  var tgElm = $('p'),
-    tagType = "span";
-  tgElm.each(function(){
-    var tgText = $(this).html();
-    tgText = tgText.replace(/[「『（【｛［〔〈《]/g, '<' + tagType + ' style="display: inline-block; margin-left: -0.6em;">$&</' + tagType + '>');
-    //以下一行を変更
-    tgText = tgText.replace(/[」』）】｝］〕〉》。、]/g, '<' + tagType + ' style="display: inline-block; margin-right: -0.6em;">$&</' + tagType + '>');
-    $(this).html(tgText);
-  });
-});
+// $(function(){
+//   var tgElm = $('p'),
+//     tagType = "span";
+//   tgElm.each(function(){
+//     var tgText = $(this).html();
+//     tgText = tgText.replace(/\【/g, '<' + tagType + ' style="display: inline-block; margin-left: -0.6em;"></' + tagType + '>');
+//     //以下一行を変更
+//     tgText = tgText.replace(/\[\」\』\）\】\｝\］\〕\〉\》\]\(\)/g, '<' + tagType + ' style="display: inline-block; margin-right: -0.6em;"></' + tagType + '>');
+//     $(this).html(tgText);
+//   });
+// });
 
-$(function(){
-  var tgElm = $('h2'),
-    tagType = "span";
-  tgElm.each(function(){
-    var tgText = $(this).html();
-    tgText = tgText.replace(/[「『（【｛［〔〈《]/g, '<' + tagType + ' style="display: inline-block; margin-left: -0.5em;">$&</' + tagType + '>');
-    //以下一行を変更
-    tgText = tgText.replace(/[」』）】｝］〕〉》。、]/g, '<' + tagType + ' style="display: inline-block; margin-right: -0.5em;">$&</' + tagType + '>');
-    $(this).html(tgText);
-  });
-});
+// $(function(){
+//   var tgElm = $('h2'),
+//     tagType = "span";
+//   tgElm.each(function(){
+//     var tgText = $(this).html();
+//     tgText = tgText.replace(/\【/g, '<' + tagType + ' style="display: inline-block; margin-left: -0.5em;"></' + tagType + '>');
+//     //以下一行を変更
+//     tgText = tgText.replace(/\】/g, '<' + tagType + ' style="display: inline-block; margin-right: -0.5em;"></' + tagType + '>');
+//     $(this).html(tgText);
+//   });
+// });
 
 
 (function(win, doc) {

@@ -8,7 +8,7 @@
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
         <?php get_template_part('content','excerpt'); ?>
         <div class="l-grid-3 footer-rescent-artist">
-          <a class="artist-info">
+          <a class="artist-info" href="<?php the_permalink($POST->ID);?>">
             <figure class="artist-info-pics" style="background-image:url('<?php the_field('post_content_artistphoto');?>');"></figure>
             <span class="artist-info-inwrap">
               <p class="artist-info-name"><?php the_field('post_content_artistname');?></p>

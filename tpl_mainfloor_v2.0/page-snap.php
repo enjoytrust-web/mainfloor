@@ -3,7 +3,7 @@
 
 <div class="breadcrumbs">
   <div class="l-container">
-    <a href="<?php home_url();?>/index.php" class="breadcrumbs-link">HOME</a> <span class=""> &gt; </span> <a href="<?php home_url();?>/event/" class="breadcrumbs-link">EVENT</a>
+    <a href="<?php home_url();?>/index.php" class="breadcrumbs-link">HOME</a> <span class=""> &gt; </span> <a href="<?php home_url();?>/snap/" class="breadcrumbs-link">SNAP</a>
   </div>
 </div>
 
@@ -13,11 +13,9 @@
 
       <div clasS="l-grid-8">
         <div class="l-row top-card-post-wrapper">
-        <?php
-          $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-          $args = array(
+        <?php $args = array(
           'post_type' => 'post' ,
-          'category_name' => 'event',
+          'category_name' => 'snap',
           'showposts' => 10 ,
         );
         $posts = get_posts( $args );

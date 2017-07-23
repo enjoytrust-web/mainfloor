@@ -3,7 +3,7 @@
 
 <div class="breadcrumbs">
   <div class="l-container">
-    <a href="<?php home_url();?>/index.php" class="breadcrumbs-link">HOME</a> <span class=""> &gt; </span> <a href="<?php home_url();?>/event/" class="breadcrumbs-link">EVENT</a>
+    <a href="<?php home_url();?>/index.php" class="breadcrumbs-link">HOME</a> <span class=""> &gt; </span> <a href="<?php home_url();?>/event/" class="breadcrumbs-link">CLUB TOPIC</a>
   </div>
 </div>
 
@@ -17,8 +17,9 @@
           $paged = get_query_var('paged') ? get_query_var('paged') : 1;
           $args = array(
           'post_type' => 'post' ,
-          'category_name' => 'event',
+          'category_name' => 'clubtopic',
           'showposts' => 10 ,
+          'paged' => $paged ,
         );
         $posts = get_posts( $args );
         if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post ); //記事がある場合

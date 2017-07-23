@@ -80,6 +80,16 @@
                 <?php the_sub_field('post_content_spotify'); ?>
               </div>
 
+            <?php elseif( get_row_layout() == 'flexiblefield_link' ) : ?>
+              <a href="<?php the_sub_field('post_content_link_url'); ?>" target="_blank" class="single-post-text-link">
+                <?php the_sub_field('post_content_link_text'); ?>
+              </a>
+
+            <?php elseif( get_row_layout() == 'flexiblefield_linkbutton' ) : ?>
+              <a href="<?php the_sub_field('post_content_linkbutton_url'); ?>" target="_blank" class="single-post-text-linkbutton">
+                <?php the_sub_field('post_content_linkbutton_text'); ?>
+              </a>
+
           <?php endif; ?>
         <?php endwhile; ?>
         <?php endif; ?>

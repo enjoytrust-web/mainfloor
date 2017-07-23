@@ -72,7 +72,7 @@
           </a>
         </li>
         <li class="g-nav-menu-listin">
-          <a href="<?php echo home_url();?>/" class="g-nav-menu-listin-link">
+          <a href="<?php echo home_url();?>/snap/" class="g-nav-menu-listin-link">
             SNAP
           </a>
         </li>
