@@ -64,15 +64,16 @@ h2,p,span {
 .mainlogo-sitename {
   color: #111;
   display: block;
-  font-family: 'Oswald',sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 4rem;
-  font-weight: 200;
+  font-weight: 400;
   text-align: center;
 }
 
 .mainlogo-catch {
   display: block;
   font-size: .365em;
+  font-weight: 200;
 
   &::before {
     content: '';
@@ -527,6 +528,7 @@ h2,p,span {
   color: #999;
   font-size: 1rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .sub-content-header {
@@ -563,6 +565,9 @@ h2,p,span {
   float: left;
   width: 40%;
   position: relative;
+  @include max(767) {
+    width: 100%;
+  }
 }
 
 .sub-content-inbox-postlist-thumb {
@@ -575,7 +580,9 @@ h2,p,span {
   padding-left: 1.5rem;
   width: 60%;
   @include max(767) {
-    padding-left: 1.5rem;
+    padding-left: 0;
+    margin-top: 1rem;
+    width: 100%;
   }
 }
 
@@ -665,6 +672,10 @@ h2,p,span {
   }
 
   &+.single-post-index-box {
+    margin-top: 2rem;
+  }
+
+  &+.single-post-pics {
     margin-top: 2rem;
   }
 
@@ -975,6 +986,7 @@ h2,p,span {
   overflow: hidden;
   @include max(767) {
     @include l-grid-6;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1049,6 +1061,10 @@ h2,p,span {
   width: 6em;
 }
 
+.post-cat-artist-footer {
+  margin-bottom: 3rem;
+}
+
 /*************BREAD CRUMBS****************/
 .breadcrumbs {
   padding: 1rem 0;
@@ -1068,9 +1084,10 @@ h2,p,span {
 .rltd-post {
   @include max(767) {
     @include l-grid-6;
+    margin-bottom: 2rem;
   }
 
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .rltd_pst_header {
   font-family: 'appleTP';
@@ -1161,4 +1178,36 @@ h2,p,span {
     max-width: 800px;
   }
 
+}
+
+
+
+.pagination {
+clear:both;
+padding:20px 0;
+position:relative;
+font-size:11px;
+line-height:13px;
+}
+ 
+.pagination span, .pagination a {
+display:block;
+float:left;
+margin: 2px 2px 2px 0;
+padding:6px 9px 5px 9px;
+text-decoration:none;
+width:auto;
+color:#fff;
+background: #555;
+}
+ 
+.pagination a:hover{
+color:#fff;
+background: #3279BB;
+}
+ 
+.pagination .current{
+padding:6px 9px 5px 9px;
+background: #3279BB;
+color:#fff;
 }

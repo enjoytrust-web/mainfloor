@@ -10,3 +10,4 @@ require_once locate_template("lib/php/posttype.php");     // カスタム投稿�
 require_once locate_template("lib/php/widgets.php");     // サイドバー、ウィジェットの関数
 require_once locate_template("lib/php/custom.php");      // その他カスタマイズの関数
 require_once locate_template("lib/php/editor.php");      // その他カスタマイズの関数
+require_once locate_template("lib/php/pagination.php");      // その他カスタマイズの関数

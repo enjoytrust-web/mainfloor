@@ -10,22 +10,15 @@
 <div class="l-wrapper">
   <div class="l-container">
     <div class="l-row">
-
       <div clasS="l-grid-8">
         <div class="l-row top-card-post-wrapper">
-        <?php
-          $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-          $args = array(
-          'post_type' => 'post' ,
-          'category_name' => 'clubtopic',
-          'showposts' => 10 ,
-          'paged' => $paged ,
-        );
-        $posts = get_posts( $args );
-        if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post ); //記事がある場合
-        $cat = get_the_category();
-        $cat = $cat[0];
-        $cat_name = $cat->cat_name; ?>
+        <?php if (have_posts()) :
+          $my_query = new WP_Query('post_type=post&category_name=clubtopic&showposts=8'.'&paged='.$paged); /* wp-pagenavi + queryposts連動させる */
+          while ( $my_query->have_posts() ) : $my_query->the_post();
+          $cat = get_the_category();
+          $cat = $cat[0];
+          $cat_name = $cat->cat_name;
+        ?>
           <div class="l-grid-6 is-posts">
             <a href="<?php the_permalink($post->ID);?>" class="content-card">
               <figure class="content-card-thumbnail" style="background-image: url('<?php the_field('post_entry_mainpics'); ?>')"></figure>
@@ -38,15 +31,13 @@
               </div>
             </a>
           </div>
-          <!-- pager -->
-<?php if (function_exists("pagination")) {
-    pagination($additional_loop->max_num_pages);
-} ?>
-<!-- /pager  -->
-          <?php endforeach; else : ?>
-          <?php endif; wp_reset_postdata();?>
-
+          <?php endwhile; ?>
+          <?php else : ?>
+          <?php endif; ?>
+          <?php wp_reset_query(); ?>
         </div>
+        <?php wp_pagenavi(array('query' => $my_query)); ?>
+
         <?php
           $args = array(
             'post_type' => 'promos-custom',

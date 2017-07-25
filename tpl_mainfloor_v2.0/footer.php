@@ -1,6 +1,6 @@
 <div class="l-wrapper guest-info-wrap">
   <div class="l-container">
-    <div class="l-row">
+    <div class="l-row post-cat-artist-footer">
       <h3 class="section-header">
         RESCENT POSTS
       </h3>
@@ -18,9 +18,26 @@
         </div>
       <?php endwhile; endif; ?>
     </div>
+    <div class="l-row">
+      <p class="google-adsense">
+        Ads by Google
+      </p>
+      <div class="l-grid-8 l-offset-left-2 ads-in-footer">
+        <!-- //広告 -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- MAINFLOOR.JP -->
+          <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-9907645431543420"
+            data-ad-slot="8815039399"
+            data-ad-format="auto"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
   </div>
 </div>
-
 <footer class="l-footer">
   <h5 class="copyright">
     &copy;2017 MAINFLOOR.JP

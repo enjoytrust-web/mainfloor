@@ -2,11 +2,23 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+
+  <!-- Google AdSense -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-9907645431543420",
+      enable_page_level_ads: true
+    });
+  </script>
+
   <meta charset="UTF-8">
-  <meta name="description" content="">
-  <meta name="robots" content="index,follow">
+
+  <!-- SEO -->
+  <meta name="keywords" content="クラブ,まとめ,フェス,EDM,ダンス,ハウス,TECHNO,HIP-HOP,R&B,DJ,ARTIST,GIRAFFE,osaka,MAINFLOOR.JP,mainfloor,">
+  <meta name="description" content="音楽。フェス。ファッション。クラブ。話題の情報を発信するウェブメディア『MAINFLOOR.JP』。">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title></title>
+  <title></title>
 
   <!-- StyleSheet -->
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -39,12 +51,18 @@
     <meta name="twitter:site" value="">
     <meta name="twitter:creator" value="">
     <meta name="twitter:card" value="">
-  <!-- Google+ -->
-    <link rel="author" href="">
+
 </head>
 
 <body>
-
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <header class="l-header">
     <h1 class="mainlogo">
       <a href="<?php echo home_url();?>/" class="mainlogo-sitename">
@@ -139,7 +157,9 @@
       <div class="l-full">
       <?php $args = array(
         'post_type' => 'post' ,
-        'showposts' => 4
+        'showposts' => 4 ,
+        'cat' => -6,
+
       );
       $posts = get_posts( $args );
       if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post ); //記事がある場合 ?>

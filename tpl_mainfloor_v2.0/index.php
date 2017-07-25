@@ -70,6 +70,17 @@
           <p class="google-adsense">
             Ads by Google
           </p>
+          <!-- //広告 -->
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- MAINFLOOR.JP -->
+          <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-9907645431543420"
+            data-ad-slot="8815039399"
+            data-ad-format="auto"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
         </div>
         <div class="sub-content-box sub-content-rescent-posts">
           <h3 class="sub-content-header">MOST POPULAR</h3>
@@ -173,26 +184,6 @@
           <?php endforeach; else : ?>
           <?php endif; wp_reset_postdata();?>
 
-        </div>
-        <div class="pagenavi">
-        <?php global $wp_rewrite;
-          $paginate_base = get_pagenum_link(1);
-          if (strpos($paginate_base, '?') || ! $wp_rewrite->using_permalinks()) {
-            $paginate_format = '';
-            $paginate_base = add_query_arg('paged', '%#%');
-          } else {
-            $paginate_format = (substr($paginate_base, -1 ,1) == '/' ? '' : '/') .
-            user_trailingslashit('page/%#%/', 'paged');;
-            $paginate_base .= '%_%';
-          }
-          echo paginate_links( array(
-            'base' => $paginate_base,
-            'format' => $paginate_format,
-            'total' => $wp_query->max_num_pages,
-            'mid_size' => 5,
-            'current' => ($paged ? $paged : 1),
-          ));
-        ?>
         </div>
       </div>
       <div clasS="l-grid-4">
