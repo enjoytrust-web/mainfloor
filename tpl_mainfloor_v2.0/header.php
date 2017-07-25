@@ -37,20 +37,25 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+
   <!-- OGP -->
-  <!-- Facebook -->
-    <meta property="fb:admins" content="">
-    <meta property="og:url" content="">
-    <meta property="og:type" content="">
-    <meta property="og:title" content="">
+    <meta property="og:url" content="http://mainfloor.jp/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MAINFLOOR.JP">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="">
-    <meta property="og:description" content="">
-    <meta property="og:site_name" content="">
+    <meta property="og:image" content="http://mainfloor.jp/twittercard_20170725.jpg">
+    <meta property="og:description" content="音楽。フェス。ファッション。クラブ。話題の情報を発信するウェブメディア『MAINFLOOR.JP』。">
+    <meta property="og:site_name" content="MAIN FLOOR.JP">
+  <!-- Facebook -->
+    <meta property="fb:app_id" content="127939967804220" />
   <!-- Twitter -->
-    <meta name="twitter:site" value="">
-    <meta name="twitter:creator" value="">
-    <meta name="twitter:card" value="">
+  <meta name="twitter:site" value="@MAINFLOOR_JP">
+  <meta name="twitter:creator" value="@MAINFLOOR_JP">
+  <meta name="twitter:card" value="summary_large_image">
+  <meta name="twitter:title" content="MAINFLOOR.JP">
+  <meta name="twitter:description" content="音楽。フェス。ファッション。クラブ。話題の情報を発信するウェブメディア『MAINFLOOR.JP』。">
+  <meta name="twitter:url" content="http://mainfloor.jp/" />
+  <meta name="twitter:image" content="http://mainfloor.jp/twittercard_20170725.jpg">
 
 </head>
 
