@@ -15,8 +15,8 @@
   <meta charset="UTF-8">
 
   <!-- SEO -->
-  <meta name="keywords" content="クラブ,まとめ,フェス,EDM,ダンス,ハウス,TECHNO,HIP-HOP,R&B,DJ,ARTIST,GIRAFFE,osaka,MAINFLOOR.JP,mainfloor,">
-  <meta name="description" content="音楽。フェス。ファッション。クラブ。話題の情報を発信するウェブメディア『MAINFLOOR.JP』。">
+  <meta name="keywords" content="クラブ,まとめ,フェス,EDM,ダンス,ハウス,TECHNO,HIP-HOP,R&B,DJ,ARTIST,GIRAFFE,osaka,MAINFLOOR.JP,mainfloor,メインフロア,">
+  <meta name="description" content="大阪・神戸・京都・関西の人気クラブや音楽、フェス、ファッションなど話題のカルチャー情報を発信するウェブメディア「MAINFLOOR.JP」。">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title></title>
 
@@ -47,7 +47,7 @@
     <meta property="og:description" content="音楽。フェス。ファッション。クラブ。話題の情報を発信するウェブメディア『MAINFLOOR.JP』。">
     <meta property="og:site_name" content="MAIN FLOOR.JP">
   <!-- Facebook -->
-    <meta property="fb:app_id" content="127939967804220" />
+    <meta property="fb:app_id" content="118875008744291" />
   <!-- Twitter -->
   <meta name="twitter:site" value="@MAINFLOOR_JP">
   <meta name="twitter:creator" value="@MAINFLOOR_JP">
@@ -110,12 +110,12 @@
               <a href="" class="g-nav-sns-listin-link">
                 <i class="fa fa-twitter"></i>
               </a>
-              <a href="" class="g-nav-sns-listin-link">
+              <!-- <a href="" class="g-nav-sns-listin-link">
                 <i class="fa fa-facebook"></i>
               </a>
               <a href="" class="g-nav-sns-listin-link">
                 <i class="fa fa-instagram"></i>
-              </a>
+              </a> -->
             </li>
           </ul>
         </li>
@@ -137,11 +137,11 @@
         </p>
         <ul class="share-nav-list">
           <li class="share-nav-listin">
-            <a href="" class="share-nav-listin-link">
+            <a href="https://twitter.com/mainfloor_jp" class="share-nav-listin-link">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
-          <li class="share-nav-listin">
+          <!-- <li class="share-nav-listin">
             <a href="" class="share-nav-listin-link">
               <i class="fa fa-facebook"></i>
             </a>
@@ -150,7 +150,7 @@
             <a href="" class="share-nav-listin-link">
               <i class="fa fa-instagram"></i>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>

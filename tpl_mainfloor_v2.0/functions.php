@@ -11,3 +11,4 @@ require_once locate_template("lib/php/widgets.php");     // サイドバー、�
 require_once locate_template("lib/php/custom.php");      // その他カスタマイズの関数
 require_once locate_template("lib/php/editor.php");      // その他カスタマイズの関数
 require_once locate_template("lib/php/pagination.php");      // その他カスタマイズの関数
+require_once locate_template("lib/php/acf-option.php");      // その他カスタマイズの関数

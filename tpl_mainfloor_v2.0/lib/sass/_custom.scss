@@ -800,7 +800,8 @@ h2,p,span {
     margin-top: .3rem;
   }
   &+.single-post-text-label-large,
-  &+.single-post-text-label-medium {
+  &+.single-post-text-label-medium,
+  &+.single-post-text-label-small {
     margin-top: 7rem;
   }
 

@@ -69,46 +69,8 @@
         <?php else : ?>
         <?php endif; wp_reset_postdata(); //クエリのリセット ?>
       </div>
-      <div clasS="l-grid-4">
-        <div class="sub-content-box sub-content-advertisement">
-
-          <p class="google-adsense">
-            Ads by Google
-          </p>
-        </div>
-        <div class="sub-content-box sub-content-rescent-posts">
-          <h3 class="sub-content-header">MOST POPULAR</h3>
-          <div class="sub-content-inbox">
-            <?php $args = array(
-              'post_type' => 'post' ,
-              'showposts' => 6 ,
-              );
-            $posts = get_posts( $args );
-            if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post ); //記事がある場合 ?>
-              <a href="<?php the_permalink($post->ID);?>" class="sub-content-inbox-postlist clearfix">
-                <div class="sub-content-inbox-postlist-pics">
-                  <figure class="sub-content-inbox-postlist-thumb" style="background-image: url('<?php the_field('post_entry_mainpics'); ?>')">
-                  </figure>
-                </div>
-                <div class="sub-content-inbox-postlist-info-wrap">
-                  <p class="sub-content-inbox-postlist-info-text-header">
-                    <?php the_field('post_entry_header'); ?>
-                  </p>
-                  <p class="postlist-info-button">READ MORE</p>
-                </div>
-              </a>
-
-            <?php endforeach; else : ?>
-            <?php endif; wp_reset_postdata();?>
-          </div>
-        </div>
-        <div class="sub-content-box sub-content-rescent-posts">
-          <h3 class="sub-content-header">SNAP</h3>
-        </div>
-        <div class="sub-content-box sub-content-rescent-posts">
-          <h3 class="sub-content-header">YouTube</h3>
-        </div>
-      </div>
+      <?php include('sidebar.php'); ?>
+      <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
     </div>
   </div>
 </div>
