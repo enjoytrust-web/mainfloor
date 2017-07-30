@@ -44,7 +44,7 @@
     <meta property="og:title" content="MAINFLOOR.JP">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:image" content="http://mainfloor.jp/twittercard_20170725.jpg">
-    <meta property="og:description" content="音楽。フェス。ファッション。クラブ。話題の情報を発信するウェブメディア『MAINFLOOR.JP』。">
+    <meta property="og:description" content="大阪・神戸・京都・関西の人気クラブや音楽、フェス、ファッションなど話題のカルチャー情報を発信するウェブメディア「MAINFLOOR.JP」。">
     <meta property="og:site_name" content="MAIN FLOOR.JP">
   <!-- Facebook -->
     <meta property="fb:app_id" content="118875008744291" />
@@ -53,7 +53,7 @@
   <meta name="twitter:creator" value="@MAINFLOOR_JP">
   <meta name="twitter:card" value="summary_large_image">
   <meta name="twitter:title" content="MAINFLOOR.JP">
-  <meta name="twitter:description" content="音楽。フェス。ファッション。クラブ。話題の情報を発信するウェブメディア『MAINFLOOR.JP』。">
+  <meta name="twitter:description" content="大阪・神戸・京都・関西の人気クラブや音楽、フェス、ファッションなど話題のカルチャー情報を発信するウェブメディア「MAINFLOOR.JP」。">
   <meta name="twitter:url" content="http://mainfloor.jp/" />
   <meta name="twitter:image" content="http://mainfloor.jp/twittercard_20170725.jpg">
 
