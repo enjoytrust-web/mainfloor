@@ -1,0 +1,82 @@
+
+@charset "UTF-8";
+
+/*==============================
+-Variable
+===============================*/
+
+
+/* ======= grid ======= */
+$maxwidth: 1170px; /* change your site maxwidth*/
+$gutter: 15px; /* change your gutter*/
+
+/* ======= breakpoint ======= */
+$breakpoint-default: 767px;
+$breakpoint-sp: 479px;
+$breakpoint-tablet: 767px;
+$breakpoint-pc: 979px;
+
+/* ======= color ======= */
+$mujirushi: #7f0019;
+$facebook: #46629e;
+$twitter: #5ca8db;
+$googleplus: #dd4c39;
+$evernote: #35de67;
+
+$black: #000000;
+$white: #ffffff;
+
+/* ======= clear ======= */
+@mixin clearfix{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* ======= prefix ======= */
+@mixin prefix($property, $value) {
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+          #{$prefix}#{$property}: $value;
+	}
+}
+
+/* ======= hoveranimation ======= */
+@mixin hoveranimation($property: auto, $duration: auto, $timing: auto, $delay: auto) {
+	transition-property: $property;
+	transition-duration: $duration;
+	transition-timing-function: $timing;
+	transition-delay: $delay;
+}
+
+/* ======= font ======= */
+$defaultfont: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+$english-line-height: 1.4;
+
+$japanesefont: "Helvetica Neue", Helvetica, "Arial", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;	
+$japanese-line-height: 1.42857;
+
+@mixin japanese {
+	font-family: $japanesefont;
+	line-height: $japanese-line-height;
+}
+
+@mixin english {
+	font-family: $defaultfont;
+	line-height: $english-line-height;
+}
+
+/* ======= positioncenter ======= */
+@mixin position-center($top: 50%, $left: 50%, $translateX: -50%, $translateY: -50%) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	transform: translate($translateX, $translateY);
+	width: 100%;
+}
+
+/* ======= mediaquery ======= */
+@mixin max($width){
+	@media only screen and ( max-width: $width + px ) {
+		@content;
+	}
+}
