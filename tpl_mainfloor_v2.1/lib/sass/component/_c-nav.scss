@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/*==============================
+-Navigation Style
+===============================*/
+
+.c-nav {
+  background: rgba(0,0,0,.9);
+  position: fixed;
+  top: 0;
+  transform: translateX(100vw);
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000;
+  @include prefix(transition,.4s cubic-bezier(0,.98,.37,1));
+
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+.c-nav-list {
+  @include position-center();
+}
+
+.c-nav-listin {
+  vertical-align: middle;
+  height: 100%;
+}
+
+.g-nav-listin-link {
+  display: block;
+  color: #37e6c8;
+  font-weight: 100;
+  padding: 2rem 0;
+  text-align: center;
+
+  &:hover {
+    background: #37e6c8;
+    color: #fff;
+  }
+}
+
+
+/*
+後ほど編集する
+ */
+.share-nav {
+  background: rgba(255,255,255,.9);
+  display: block;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100vw);
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  @include prefix(transition,.4s cubic-bezier(0,.98,.37,1));
+
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+.share-nav-box {
+  @include position-center();
+}
+
+.share-nav-maincatch {
+  font-family: 'Oswald',sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.share-nav-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.share-nav-listin {
+  flex: 1;
+}
+
+.share-nav-listin-link {
+  display: block;
+  color: #222;
+  font-size: 2rem;
+  text-align: center;
+}

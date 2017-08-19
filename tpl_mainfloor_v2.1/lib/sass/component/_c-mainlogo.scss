@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/*==============================
+-Sitename(Logo) Style
+===============================*/
+.c-mainlogo {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.c-mainlogo-sitename {
+  color: #111;
+  display: block;
+  font-size: 4rem;
+  font-family: 'Oswald';
+  font-weight: 400;
+  text-align: center;
+}
+
+.c-mainlogo-catch {
+  display: block;
+  font-size: .365em;
+  font-weight: 200;
+
+  &::before {
+    background: #666;
+    content: '';
+    display: block;
+    margin: 1rem auto 2rem;
+    height: 1px;
+    width: 4rem;
+  }
+}

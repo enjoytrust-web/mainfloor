@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/*==============================
+-Header Style
+===============================*/
+
+.l-header {
+  padding: 70px 0;
+
+  @include max(767) {
+    padding: 2rem 0;
+  }
+}

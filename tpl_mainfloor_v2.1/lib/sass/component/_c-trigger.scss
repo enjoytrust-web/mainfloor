@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/*==============================
+-Trigger Style
+===============================*/
+// trigger
+.c-trigger {
+  background: #37e6c8;
+  display: block;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  z-index: 10000;
+  @include prefix(transition,.6s cubic-bezier(0,.98,.37,1));
+
+  &:hover {
+    // background: #37e6c8;
+  }
+
+  &.active {
+    background: rgba(0,0,0,0);
+  }
+
+}
+
+.c-trigger-line {
+  background: #fcfcfc;
+  border-radius: 3px;
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 2rem;
+  @include prefix(transition,.3s cubic-bezier(0,.98,.37,1));
+
+  &:nth-of-type(1) {
+    top: -2rem;
+  }
+
+  &:nth-of-type(3) {
+    bottom: -2rem;
+  }
+
+  &.active {
+    background: #37e6c8;
+    width: 2rem;
+
+    &:nth-of-type(1) {
+      top: 0;
+      @include prefix(transform,rotate(-225deg));
+    }
+
+    &:nth-of-type(2) {
+      width: 0;
+    }
+
+    &:nth-of-type(3) {
+      bottom: 0;
+      @include prefix(transform,rotate(-135deg));
+    }
+
+  }
+
+}
+
+.trigger-share {
+  background: #231f20;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  z-index: 10000;
+  @include prefix(transition,.6s cubic-bezier(0,.98,.37,1));
+
+  &.active {
+    background: #37e6c8;
+  }
+}
+
+.fa-share-alt {
+  color: #37e6c8;
+  font-size: 2.5rem;
+  font-weight: 200;
+  text-align: center;
+  @include position-center();
+
+  &.active {
+    color: #fff;
+  }
+}

@@ -60,7 +60,9 @@
 </head>
 
 <body>
+
   <div id="fb-root"></div>
+
   <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -68,65 +70,54 @@
   js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8";
   fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
+
   <header class="l-header">
-    <h1 class="mainlogo">
-      <a href="<?php echo home_url();?>/" class="mainlogo-sitename">
+    <h1 class="c-mainlogo">
+      <a href="<?php echo home_url();?>/" class="c-mainlogo-sitename">
         MAINFLOOR
-        <span class="mainlogo-catch">
+        <span class="c-mainlogo-catch">
           MUSIC PARTY LIFE MAGAZINE
         </span>
       </a>
     </h1>
-    <nav class="g-nav">
-      <ul class="g-nav-menu-list">
-        <li class="g-nav-menu-listin">
-          <a href="<?php echo home_url();?>/event/" class="g-nav-menu-listin-link">
+
+    <nav class="c-nav">
+      <ul class="c-nav-list">
+        <li class="c-nav-listin">
+          <a href="<?php echo home_url();?>/event/" class="g-nav-listin-link">
             EVENT
           </a>
         </li>
-        <li class="g-nav-menu-listin">
-          <a href="<?php echo home_url();?>/clubtopic/" class="g-nav-menu-listin-link">
+        <li class="c-nav-listin">
+          <a href="<?php echo home_url();?>/clubtopic/" class="g-nav-listin-link">
             CLUB TOPIC
           </a>
         </li>
-        <li class="g-nav-menu-listin">
-          <a href="<?php echo home_url();?>/artist/" class="g-nav-menu-listin-link">
+        <li class="c-nav-listin">
+          <a href="<?php echo home_url();?>/artist/" class="g-nav-listin-link">
             DJ / ARTIST
           </a>
         </li>
-        <li class="g-nav-menu-listin">
-          <a href="<?php echo home_url();?>/snap/" class="g-nav-menu-listin-link">
+        <li class="c-nav-listin">
+          <a href="<?php echo home_url();?>/snap/" class="g-nav-listin-link">
             SNAP
           </a>
         </li>
-        <li class="g-nav-menu-listin">
-          <a href="<?php echo home_url();?>/music/" class="g-nav-menu-listin-link">
+        <li class="c-nav-listin">
+          <a href="<?php echo home_url();?>/music/" class="g-nav-listin-link">
             MUSIC
           </a>
         </li>
-        <li class="g-nav-menu-listin">
-          <ul class="g-nav-sns-list">
-            <li class="g-nav-sns-listin">
-              <a href="" class="g-nav-sns-listin-link">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <!-- <a href="" class="g-nav-sns-listin-link">
-                <i class="fa fa-facebook"></i>
-              </a>
-              <a href="" class="g-nav-sns-listin-link">
-                <i class="fa fa-instagram"></i>
-              </a> -->
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <ul>
     </nav>
-    <div class="trigger-wrapper">
-      <div class="trigger-line"></div>
-      <div class="trigger-line"></div>
-      <div class="trigger-line"></div>
+
+    <div class="c-trigger">
+      <div class="c-trigger-line"></div>
+      <div class="c-trigger-line"></div>
+      <div class="c-trigger-line"></div>
     </div>
-    <div class="share-trigger">
+
+    <div class="c-trigger trigger-share">
       <i class="fa fa-share-alt" aria-hidden="true"></i>
     </div>
 
@@ -156,33 +147,9 @@
     </nav>
   </header>
 
-  <?php if(is_home()):?>
+  <?php if(is_home()):// トップページだった場合に ?>
 
-    <div class="l-wrapper top-content-topics">
-      <div class="l-full">
-      <?php $args = array(
-        'post_type' => 'post' ,
-        'showposts' => 4 ,
-        'cat' => -6,
-
-      );
-      $posts = get_posts( $args );
-      if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post ); //記事がある場合 ?>
-          <div class="l-tile-grid-3">
-            <a href="<?php the_permalink($post->ID);?>" class="top-post-info">
-              <figure class="top-post-info-pics" style="background-image: url('<?php the_field('post_entry_mainpics'); ?>')"></figure>
-              <figcaption class="top-post-info-wrapper">
-                <p class="top-post-info-label"><?php ;?></p>
-                <p class="top-post-info-header"><?php the_field('post_entry_header');?></p>
-                <p class="top-post-info-more">MORE</p>
-              </figcaption>
-            </a>
-          </div>
-      <?php endforeach; else : ?>
-      <?php endif; wp_reset_postdata();?>
-
-      </div>
-    </div>
+    <?php get_template_part('component','topics');// topics.phpを読み込む ?>
 
   <?php endif; ?>
 

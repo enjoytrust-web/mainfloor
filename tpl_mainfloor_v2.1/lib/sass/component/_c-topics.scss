@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/*==============================
+-Topics Style
+===============================*/
+.c-topics-wrapper {
+  background: #eee;
+  padding: 4rem 0;
+}
+
+.c-topics {
+  background: #000;
+  display: block;
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &:hover {
+    .c-topics-thumbnail {
+      opacity: .7;
+      @include prefix(transform, scale(1.2,1.2));
+    }
+
+  }
+
+}
+
+.c-topics-thumbnail {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  @include prefix(transition, .2s);
+}
+
+.c-topics-info {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.c-topics-info-title {
+  color: #36e7c8;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: justify;
+  word-break: break-all;
+  line-height: 2.4rem;
+}

@@ -1,12 +1,12 @@
 <!--関連記事-->
-    <h3 class="rltd_pst_header">RELATED POSTS</h3>
+  <h3 class="rltd_pst_header">RELATED POSTS</h3>
     <div class="l-row">
     <?php
-        $categories = get_the_category($post->ID);
-        $category_ID = array();
-        foreach($categories as $category):
-          array_push( $category_ID, $category -> cat_ID);
-        endforeach ;
+      $categories = get_the_category($post->ID);
+      $category_ID = array();
+      foreach($categories as $category):
+        array_push( $category_ID, $category -> cat_ID);
+      endforeach ;
         $args = array(
           'post__not_in' => array($post -> ID),
           'posts_per_page'=> 5,
