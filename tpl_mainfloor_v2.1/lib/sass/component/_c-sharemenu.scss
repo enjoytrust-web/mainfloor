@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* ================================================================================
+===================================================================================
+
+- Share Menu Styles
+
+===================================================================================
+================================================================================ */
+.c-sharemenu {
+  background: rgba(255,255,255,.9);
+  display: block;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100vw);
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  @include prefix(transition,.4s cubic-bezier(0,.98,.37,1));
+}
+
+.c-sharemenu-inwrap {
+  @include position-center();
+}
+
+.c-sharemenu-heading {
+  font-family: 'Oswald',sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.c-sharemenu-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.c-sharemanu-listin {
+  flex: 1;
+}
+
+.c-sharemenu-listin-link {
+  display: block;
+  color: #222;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.c-sharemenu-icon {
+  font-size: 2.8rem;
+  color: #222;
+
+  &:hover {
+    color: #36e7c8;
+  }
+}
+
+/* ================================================================================
+===================================================================================
+
+- Share Menu Trigger Styles
+
+===================================================================================
+================================================================================ */
+.c-sharemenu-trigger {
+  background: #231f20;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  z-index: 10000;
+  @include prefix(transition,.6s cubic-bezier(0,.98,.37,1));
+}
+
+.fa-share-alt {
+  color: #37e6c8;
+  font-size: 2.5rem;
+  font-weight: 200;
+  text-align: center;
+  @include position-center();
+}

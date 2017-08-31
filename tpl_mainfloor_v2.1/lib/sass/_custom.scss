@@ -46,23 +46,7 @@ h2,p,span {
 
 
 
-.g-nav-sns-list {
-  @include clearfix;
-}
 
-.g-nav-sns-listin {
-  display: block;
-  margin: 0 auto;
-  max-width: 240px;
-}
-
-.g-nav-sns-listin-link {
-  display: block;
-  float: left;
-  font-size: 1.8rem;
-  text-align: center;
-  width: 33.333%;
-}
 .fa-twitter {
   color: #37e6c8;
 }

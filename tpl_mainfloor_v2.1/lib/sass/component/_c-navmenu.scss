@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* ================================================================================
+===================================================================================
+
+- Navigation Menu Styles
+
+===================================================================================
+================================================================================ */
+.c-navmenu {
+  background: rgba(0,0,0,.9);
+  position: fixed;
+  top: 0;
+  transform: translateX(100vw);
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000;
+  @include prefix(transition,.4s cubic-bezier(0,.98,.37,1));
+}
+
+.c-navmenu-list {
+  @include position-center();
+}
+
+.c-navmenu-listin {
+  vertical-align: middle;
+  height: 100%;
+}
+
+.c-navmenu-listin-link {
+  display: block;
+  color: #37e6c8;
+  font-size: 2.4rem;
+  font-weight: 100;
+  padding: 2rem 0;
+  text-align: center;
+
+  &:hover {
+    background: #37e6c8;
+    color: #fff;
+  }
+
+}
+
+/* ================================================================================
+===================================================================================
+
+- Navigation Menu Trigger Styles
+
+===================================================================================
+================================================================================ */
+.c-navmenu-trigger {
+  background: #37e6c8;
+  display: block;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  z-index: 10000;
+  @include prefix(transition,.6s cubic-bezier(0,.98,.37,1));
+
+  &:hover {
+    background: #1b1b1b;
+    cursor: pointer;
+  }
+
+}
+
+.c-navmenu-trigger-line {
+  background: #fcfcfc;
+  border-radius: 3px;
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 2rem;
+  @include prefix(transition,.3s cubic-bezier(0,.98,.37,1));
+
+  &:nth-of-type(1) {
+    top: -2rem;
+  }
+
+  &:nth-of-type(3) {
+    bottom: -2rem;
+  }
+
+}
